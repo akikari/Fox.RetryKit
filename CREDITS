@@ -1,0 +1,113 @@
+Credits
+=======
+
+Fox.OptionKit is an original work created and maintained by Károly Akácz.
+
+Author
+------
+
+Károly Akácz
+  GitHub: @akikari (https://github.com/akikari)
+  Project: https://github.com/akikari/Fox.OptionKit
+
+
+Project Philosophy
+------------------
+
+Fox.OptionKit embodies a set of core design principles that guide its development:
+
+Type-Safe Optional Values
+  The library is built on the principle that null values should be replaced with
+  explicit Option<T> types, making the presence or absence of values part of the
+  type system. This design choice prevents NullReferenceExceptions and provides
+  compile-time safety.
+
+Explicit Over Implicit
+  All optional values are explicitly wrapped in Option<T>, making the contract
+  clear and discoverable. There are no hidden null checks or magic conventions—
+  what you see is what you get.
+
+Functional Composition
+  Leveraging functional programming patterns (Map, Bind, Match), Fox.OptionKit
+  enables clean, composable code that handles optional values without nested
+  null checks or try-catch blocks.
+
+Zero External Dependencies
+  The library deliberately has no external dependencies beyond the .NET base
+  library. This decision ensures long-term stability, eliminates dependency
+  conflicts, and maintains a minimal attack surface.
+
+Developer Experience
+  Clear error messages, IntelliSense-friendly APIs, and comprehensive XML
+  documentation are first-class concerns. The library is designed to be intuitive
+  for C# developers familiar with functional programming concepts.
+
+
+Architectural Decisions
+------------------------
+
+Fox.OptionKit (Core Library)
+  The core library provides a minimal, dependency-free Option<T> implementation
+  with three main components:
+
+  1. Option<T> Struct - Immutable, type-safe container for optional values
+  2. Factory Methods - Option.Some<T>() and Option.None<T>() for creating options
+  3. Functional Operations - Map, Bind, Match for composing operations on optional values
+  4. Extension Methods - ToOption() for converting nullable types
+
+  The architecture deliberately avoids complex abstractions, favoring simple,
+  testable components that follow functional programming principles (functor and
+  monad laws).
+
+No Integration Packages (By Design)
+  Unlike other Fox.*Kit libraries, Fox.OptionKit is intentionally standalone with
+  no integration packages. The Option<T> pattern is fundamental and should remain
+  dependency-free to maximize adoption across different project architectures.
+
+
+Inspirations
+------------
+
+This project draws inspiration from:
+
+  - F# Option Type - The canonical implementation of optional values in .NET
+  - Rust's Option<T> - Ergonomic API design and pattern matching
+  - Haskell's Maybe - Monadic composition principles
+  - Railway Oriented Programming (Scott Wlaschin) - Functional error handling patterns
+  - Functional Programming Principles - Type safety, immutability, composition
+
+
+Acknowledgments
+---------------
+
+Special thanks to the .NET and functional programming communities for:
+  - F# Language Design - Pioneering Option types in .NET
+  - Rust Community - Demonstrating the value of explicit optional types
+  - Scott Wlaschin - Railway Oriented Programming educational content
+  - All contributors, testers, and users who help improve this library
+
+
+Contributing
+------------
+
+Fox.OptionKit welcomes contributions that align with its design philosophy:
+  - Lightweight, focused features
+  - Absolutely no new dependencies
+  - Comprehensive tests
+  - Clear documentation
+  - Functional purity
+
+See CONTRIBUTING.md for details.
+
+
+License
+-------
+
+Fox.OptionKit is licensed under the MIT License.
+Copyright (c) 2026 Károly Akácz
+
+This is a permissive license that allows you to use, modify, and distribute this
+software freely, including in commercial applications. The only requirement is to
+include the copyright notice and license text in your distributions.
+
+See LICENSE.txt for the full license text.

@@ -1,0 +1,21 @@
+<svg width="128" height="128" viewBox="0 0 128 128"
+     xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Background -->
+  <rect width="128" height="128" fill="#1E1E1E"/>
+
+  <!-- Retry arrows -->
+  <g fill="none" stroke="#E5E5E5" stroke-width="7"
+     stroke-linecap="round" stroke-linejoin="round">
+
+    <!-- Shortest arrow (top) - moved up -->
+    <path d="M22 32 L68 32 L60 24 M68 32 L60 40"/>
+
+    <!-- Medium arrow (middle) - unchanged -->
+    <path d="M22 64 L88 64 L80 56 M88 64 L80 72"/>
+
+    <!-- Longest arrow (bottom) - moved down -->
+    <path d="M22 96 L108 96 L100 88 M108 96 L100 104"/>
+
+  </g>
+</svg>

@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/samples/">
+    <Project Path="samples/Fox.RetryKit.Demo/Fox.RetryKit.Demo.csproj" Id="a8802edf-32b4-4339-9239-df0d2897b668" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/Fox.RetryKit/Fox.RetryKit.csproj" Id="bbb39963-25e0-4eb5-8421-cf802447f1db" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Fox.RetryKit.Tests/Fox.RetryKit.Tests.csproj" Id="c127c5a7-4355-40e7-820c-66fd0a5c86ab" />
+  </Folder>
+</Solution>

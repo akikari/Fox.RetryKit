@@ -1,0 +1,24 @@
+# Code Owners for Fox.OptionKit
+# These users will be automatically requested for review when someone opens a pull request.
+# See: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Global owner for everything in the repository
+* @akikari
+
+# Core library
+/src/Fox.OptionKit/ @akikari
+
+# Tests
+/tests/ @akikari
+
+# Documentation
+/README.md @akikari
+/CHANGELOG.md @akikari
+/.github/ @akikari
+
+# Build configuration
+/Directory.Build.props @akikari
+*.csproj @akikari
+
+# GitHub workflows (require extra scrutiny)
+/.github/workflows/ @akikari

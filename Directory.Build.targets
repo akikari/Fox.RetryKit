@@ -1,0 +1,22 @@
+﻿<Project>
+    <!--
+    Directory.Build.targets - Centralized build targets and customizations
+
+    This file runs at the end of the build process, enabling build customization.
+    -->
+
+    <!-- NuGet package metadata validation -->
+    <Target Name="ValidatePackageMetadata" BeforeTargets="Pack" Condition="'$(IsPackable)' == 'true'">
+        <Error Condition="'$(Version)' == ''" Text="Version property must be set" />
+        <Error Condition="'$(Description)' == ''" Text="Description property must be set" />
+        <Error Condition="'$(PackageTags)' == ''" Text="PackageTags property must be set" />
+        <Warning Condition="'$(PackageIcon)' == ''" Text="PackageIcon is not set - consider adding an icon for better visibility" />
+        <Warning Condition="'$(PackageReadmeFile)' == ''" Text="PackageReadmeFile is not set - consider adding a README" />
+    </Target>
+
+    <!-- Display build information -->
+    <Target Name="DisplayBuildInfo" BeforeTargets="CoreCompile">
+        <Message Importance="high" Text="Building $(MSBuildProjectName) [$(TargetFramework)] - $(Configuration)" />
+    </Target>
+
+</Project>

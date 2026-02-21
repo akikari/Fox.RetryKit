@@ -1,0 +1,20 @@
+Fox.OptionKit - Copyright Notice
+=================================
+
+Copyright (c) 2026 Károly Akácz
+
+This software is licensed under the MIT License.
+See LICENSE.txt for the full license text.
+
+Original Author: Károly Akácz
+Project URL: https://github.com/akikari/Fox.OptionKit
+
+This library provides a minimalist, dependency-free Option<T> implementation for C#,
+enabling type-safe handling of optional values with functional programming patterns
+like Map, Bind, and Match.
+
+Key Components:
+- Fox.OptionKit: Core library with Option<T> struct and functional operations
+
+All contributions, modifications, and derivative works must retain this notice
+and the MIT License terms.
