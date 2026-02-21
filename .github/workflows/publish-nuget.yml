@@ -72,11 +72,11 @@ jobs:
       - name: Run tests
         run: dotnet test --configuration Release --no-build --verbosity normal
 
-      - name: Pack Fox.OptionKit
-        run: dotnet pack src/Fox.OptionKit/Fox.OptionKit.csproj --configuration Release --no-build /p:PackageVersion=${{ steps.get_version.outputs.VERSION }}
+      - name: Pack Fox.RetryKit
+        run: dotnet pack src/Fox.RetryKit/Fox.RetryKit.csproj --configuration Release --no-build /p:PackageVersion=${{ steps.get_version.outputs.VERSION }}
 
-      - name: Publish Fox.OptionKit to NuGet
-        run: dotnet nuget push ./artifacts/Fox.OptionKit.${{ steps.get_version.outputs.VERSION }}.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate
+      - name: Publish Fox.RetryKit to NuGet
+        run: dotnet nuget push ./artifacts/Fox.RetryKit.${{ steps.get_version.outputs.VERSION }}.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
@@ -94,7 +94,7 @@ jobs:
           body: |
             ## NuGet Package
 
-            - [Fox.OptionKit ${{ steps.get_version.outputs.VERSION }}](https://www.nuget.org/packages/Fox.OptionKit/${{ steps.get_version.outputs.VERSION }})
+            - [Fox.RetryKit ${{ steps.get_version.outputs.VERSION }}](https://www.nuget.org/packages/Fox.RetryKit/${{ steps.get_version.outputs.VERSION }})
 
             See [CHANGELOG.md](https://github.com/${{ github.repository }}/blob/main/CHANGELOG.md) for details.
           files: |

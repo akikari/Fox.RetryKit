@@ -69,8 +69,8 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore
 
-    - name: Pack Fox.OptionKit
-      run: dotnet pack src/Fox.OptionKit/Fox.OptionKit.csproj --configuration Release --no-restore
+    - name: Pack Fox.RetryKit
+      run: dotnet pack src/Fox.RetryKit/Fox.RetryKit.csproj --configuration Release --no-restore
 
     - name: Upload artifacts
       uses: actions/upload-artifact@v4
