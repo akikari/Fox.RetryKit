@@ -8,13 +8,13 @@
   <g fill="none" stroke="#E5E5E5" stroke-width="7"
      stroke-linecap="round" stroke-linejoin="round">
 
-    <!-- Shortest arrow (top) - moved up -->
+    <!-- Arrow (top) -->
     <path d="M22 32 L68 32 L60 24 M68 32 L60 40"/>
 
-    <!-- Medium arrow (middle) - unchanged -->
+    <!-- Arrow (middle) -->
     <path d="M22 64 L88 64 L80 56 M88 64 L80 72"/>
 
-    <!-- Longest arrow (bottom) - moved down -->
+    <!-- Arrow (bottom) -->
     <path d="M22 96 L108 96 L100 88 M108 96 L100 104"/>
 
   </g>
