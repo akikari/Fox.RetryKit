@@ -50,6 +50,7 @@ jobs:
       if: matrix.os == 'ubuntu-latest' && matrix.dotnet-version == '8.0.x'
       uses: codecov/codecov-action@v4
       with:
+        token: ${{ secrets.CODECOV_TOKEN }}
         files: './coverage-report/**/coverage.cobertura.xml'
         flags: unittests
         fail_ci_if_error: false
