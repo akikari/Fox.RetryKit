@@ -163,7 +163,6 @@ internal static class RetryExecutor
     {
         bool wrappedFunc() { action(); return true; }
 
-        var stopwatch = System.Diagnostics.Stopwatch.StartNew();
         var result = ExecuteWithResult(policy, wrappedFunc, cancellationToken);
         return new RetryResult(result.Success, result.Attempts, result.TotalDuration, result.LastException);
     }

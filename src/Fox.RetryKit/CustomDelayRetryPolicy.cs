@@ -39,21 +39,6 @@ public sealed class CustomDelayRetryPolicy : RetryPolicyBase
 
     //==============================================================================================
     /// <summary>
-    /// Initializes a new instance with custom delay sequence and additional configuration.
-    /// </summary>
-    /// <param name="delays">The sequence of delay durations for each retry attempt.</param>
-    /// <param name="timeout">The optional timeout duration.</param>
-    /// <param name="handledExceptions">The collection of exception types to handle.</param>
-    /// <param name="onRetryCallback">The optional callback invoked before each retry.</param>
-    //==============================================================================================
-    internal CustomDelayRetryPolicy(IReadOnlyList<TimeSpan> delays, TimeSpan? timeout, IReadOnlyCollection<Type> handledExceptions, Action<Exception, int, TimeSpan>? onRetryCallback)
-        : base(delays.Count, DelayStrategy.Fixed, TimeSpan.Zero, timeout, handledExceptions, onRetryCallback, false, null)
-    {
-        CustomDelays = delays;
-    }
-
-    //==============================================================================================
-    /// <summary>
     /// Initializes a new instance with custom delay sequence and full configuration including jitter and max delay.
     /// </summary>
     /// <param name="delays">The sequence of delay durations for each retry attempt.</param>

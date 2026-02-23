@@ -5,6 +5,7 @@
 [![NuGet](https://img.shields.io/nuget/v/Fox.RetryKit.svg)](https://www.nuget.org/packages/Fox.RetryKit/)
 [![NuGet Downloads](https://img.shields.io/nuget/dt/Fox.RetryKit?label=downloads&color=darkgreen)](https://www.nuget.org/packages/Fox.RetryKit/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-orange.svg)](https://opensource.org/licenses/MIT)
+[![codecov](https://img.shields.io/codecov/c/github/akikari/Fox.RetryKit?color=darkgreen&label=codecov)](https://codecov.io/gh/akikari/Fox.RetryKit)
 
 A minimalist, dependency-free retry and timeout utility for C#. Build resilient applications with simple, type-safe retry policies.
 
