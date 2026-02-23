@@ -44,13 +44,12 @@ jobs:
 
     - name: Run tests with coverage (net8.0 only)
       if: matrix.os == 'ubuntu-latest' && matrix.dotnet-version == '8.0.x'
-      run: dotnet test tests/Fox.RetryKit.Tests --configuration Release --framework net8.0 --no-build --collect:"XPlat Code Coverage" --settings coverlet.runsettings --results-directory ./coverage-report
+      run: dotnet test tests/Fox.RetryKit.Tests/Fox.RetryKit.Tests.csproj --configuration Release --framework net8.0 --collect:"XPlat Code Coverage" --settings coverlet.runsettings --results-directory ./coverage-report
 
     - name: Upload coverage to Codecov
       if: matrix.os == 'ubuntu-latest' && matrix.dotnet-version == '8.0.x'
       uses: codecov/codecov-action@v4
       with:
-        token: ${{ secrets.CODECOV_TOKEN }}
         files: './coverage-report/**/coverage.cobertura.xml'
         flags: unittests
         fail_ci_if_error: false
