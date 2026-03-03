@@ -9,6 +9,20 @@
 
 A minimalist, dependency-free retry and timeout utility for C#. Build resilient applications with simple, type-safe retry policies.
 
+## Table of Contents
+
+- [Why Fox.RetryKit?](#why-foxretrykit)
+- [Installation](#installation)
+- [Quick Start](#quick-start)
+- [Extended Features](#extended-features)
+- [Real-World Examples](#real-world-examples)
+- [Architecture](#architecture)
+- [API Reference](#api-reference)
+- [Real-World Example](#real-world-example)
+- [Contributing](#contributing)
+- [License](#license)
+- [Acknowledgments](#acknowledgments)
+
 ## Why Fox.RetryKit?
 
 Fox.RetryKit provides a clean, lightweight implementation of retry and timeout patterns without any dependencies:
@@ -355,6 +369,9 @@ policy.Fallback<T>(Func<T> func, Func<T> fallbackProvider, CancellationToken tok
 policy.FallbackAsync<T>(Func<Task<T>> func, T fallbackValue, CancellationToken token = default)
 policy.FallbackAsync<T>(Func<Task<T>> func, Func<Task<T>> fallbackProvider, CancellationToken token = default)
 ```
+## Real-World Example
+
+See this package in action within a complete production-grade application: **[Fox.TaskFlow](https://github.com/akikari/Fox.TaskFlow)** - A comprehensive demonstration showcasing real-world integration of seven Fox.*Kit packages in a task management system built with Clean Architecture, SOLID principles, and modern .NET 10 practices.
 
 ## Contributing
 
